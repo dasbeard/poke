@@ -1,0 +1,57 @@
+*{
+  padding: 0;
+  margin: 0;
+  background-color: silver;
+}
+
+.container{
+  width: 90%;
+  margin: 0 auto;
+}
+
+header{
+  display: inline;
+}
+
+  .name, .logout{
+    display: inline-block;
+    width: 45%;
+    margin: 15px;
+    vertical-align: top;
+    margin-bottom: 25px;
+  }
+
+  .logout{
+    text-align: right;
+  }
+
+  .name h1{
+    margin-bottom: 5px;
+  }
+
+.title{
+  margin: 15px;
+  margin-bottom: 25px;
+}
+
+.mypokes{
+  width: 325px;
+  height: 100px;
+  overflow: scroll;
+  border: 1px solid black;
+  margin-bottom: 25px;
+}
+  .mypokes p{
+    margin: 5px;
+  }
+
+.topoke{
+  padding: 5px;
+  height: 125px;
+  margin: auto;
+}
+
+ .topoke tr, .topoke th, .topoke td{
+   border: 1px solid black;
+   padding: 3px;
+ }

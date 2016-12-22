@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Login / Register</title>
+    {%load static %}
+    <link rel="stylesheet" href="{% static 'loginReg/css/styles.css' %}">
+  </head>
+  <body>
+    <div class="container">
+
+
+    {% if messages %}
+      <ul class="messages">
+          {% for message in messages %}
+          <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+          {% endfor %}
+      </ul>
+    {% endif %}
+
+    <form class="register" action="{% url 'users:register' %}" method="POST">
+      <fieldset>
+        <legend>Register</legend>
+        <label>
+          Name: <input type="text" name="name">
+          Alias: <input type="text" name="alias">
+          Email: <input type="text" name="email">
+          Password: <input type="text" name="password">
+          Confirm Password: <input type="text" name="passconf">
+          Date of Birth: <input type="Date" name="dob">
+
+          <input type="submit" value="Register">
+          {% csrf_token %}
+        </label>
+      </fieldset>
+    </form>
+
+    <form class="login" action="{% url 'users:login' %}" method="POST">
+      <fieldset>
+        <legend>Login</legend>
+        <label>
+          Email: <input type="text" name="email">
+          Password: <input type="text" name="password">
+          <input type="submit" value="Login!">
+          {% csrf_token %}
+        </label>
+      </fieldset>
+    </form>
+
+
+
+  </div>
+  </body>
+</html>
